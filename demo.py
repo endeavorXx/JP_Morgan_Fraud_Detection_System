@@ -15,3 +15,15 @@ end_date = '2022-04-02 12:00:00'
 
 difference = difference_in_seconds(start_date, end_date)
 print("Difference in seconds:", difference)
+
+import pandas as pd
+
+# Create a sample dataframe
+Biodata = {'Name': ['John', 'Emily', 'Mike', 'Lisa'],
+        'Age': [28, 23, 35, 31],
+        'Gender': ['M', 'F', 'M', 'F']
+        }
+df = pd.DataFrame(Biodata)
+
+# Save the dataframe to a CSV file
+df.to_csv('Biodata.csv', index=False)
